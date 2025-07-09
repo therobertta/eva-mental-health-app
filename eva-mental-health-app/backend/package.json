@@ -1,0 +1,44 @@
+{
+  "name": "eva-mental-health-backend",
+  "version": "1.0.0",
+  "description": "Eva Mental Health Companion API - Simplified Example",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "migrate": "node database/migrate.js",
+    "seed": "node database/seed.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "pg": "^8.11.3",
+    "jsonwebtoken": "^9.0.2",
+    "bcrypt": "^5.1.1",
+    "openai": "^4.20.0",
+    "uuid": "^9.0.1",
+    "axios": "^1.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.5",
+    "eslint": "^8.50.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js"
+    ],
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
+  }
+}
